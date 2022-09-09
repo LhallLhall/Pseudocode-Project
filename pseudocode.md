@@ -2,7 +2,7 @@
 ## Describing how an elevator works.
 ### Objects
 1. Elevator
-    * when it's recieved an number form the array it dettects what floor it needs to go too then it determines whether or not to go up or down. When it has completed all of items in the array it stops.
+    * when the elevator receives an input number it adds the input to the queue array and determines what floor it needs to go to.  It determines to go up or down based on the floor it currently occupies. When it doesn’t have any items in the queue array it stops.
 2. Door
     * opens when arrived on a floor that had a button press on the outside and inside
     * Also closes when a button has been pressed on the inside unless open door button is being pressed
