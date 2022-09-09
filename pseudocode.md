@@ -2,33 +2,33 @@
 ## Describing how an elevator works.
 ### Objects
 1. Elevator
-    * when told where to go determines whether or not to go up or down. When it has completed all of the processes it stops.
+    * when it's recieved an number form the array it dettects what floor it needs to go too then it determines whether or not to go up or down. When it has completed all of items in the array it stops.
 2. Door
     * opens when arrived on a floor that had a button press on the outside and inside
     * Also closes when a button has been pressed on the inside unless open door button is being pressed
 3. Button Panels
   * Button Panel Inside
-    * Has (open door) and (close door) buttons. Also has an array of buttons that tell the elevator where to go/funciton to call.
+    * Has (open door) and (close door) buttons. Also has an array of buttons that tell the elevator where to go/what function to call.
   * Button Panel Outside
-    * calls the elevator to it's location and adds itself to the queue.
+    * calls the elevator to it's location and adds to the queue.
 ### procedure for picking up a person
 ~~~
 START
 INIT = power on
 
 WHILE power on 
-    check queue
-    check floor
+    check queue for items
+    check current floor of the elevator
 ---
 WHEN outside input button is pressed
     create input
-    add button to queue(array)
+    add input to the queue
 ---
 
 ---
 IF the queue has more than 0 in the array
-    check what floor it is
-ELSE IF button input floor = more than elevator's floor
+    check what floor number it is
+ELSE IF inputs floor > elevator's current floor
     go up
 ELSE
     go down
@@ -53,9 +53,10 @@ WHEN reached the queues current item
     delete floors input
 --- 
 // When the elevator has someone on it.
+
 WHEN the inside button input is pressed
-    add tot he queue
-    If button input = more than elevator
+    add input to the queue
+    If button input floor > elevator floor
         go up
     ELSE 
         go down
