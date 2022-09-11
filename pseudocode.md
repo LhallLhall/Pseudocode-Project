@@ -16,9 +16,6 @@
 3. Door
    - opens when arrived on a floor that had a button press on the outside or inside
      - Also closes when a button has been pressed on the inside unless open door button is being pressed
-### Variables
-- button
-- 
 ### Functions
 
 1. callElevator()
@@ -36,12 +33,12 @@
    * when the button us pressed it tells the elevator what floor the press was executed on.
 
 ~~~
-let riderQueue []
 let riderPickupQueueUp []
 let riderPickupQueueDown []
 
 Function callElevator
-
+      WHEN a button has been pressed (buttonPress)
+         
 Function stopAtFloor
       IF elevatorFloor = a floor inside riderPickupQueueUp
          open all doors and continue up
