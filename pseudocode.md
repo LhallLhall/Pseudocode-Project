@@ -3,19 +3,19 @@
 ### Objects/INIT
 1. Elevator
    - Goes up and down while listening for updates in an array
-     - When it's recieved a number from the array it detects what floor it needs to go too then it determines whether or not to go up or down. When it has completed all of items in the array it stops.
+    - When it's recieved a number from the array it detects what floor it needs to go too then it determines whether or not to go up or down. When it has completed all of items in the array it stops.
 
 2. Button Panels
    - Button Panel Inside
-     - Has (open door) and (close door) buttons. On press the buttons push a number to an array where the  
+    - Has (open door) and (close door) buttons. On press the buttons push a number to an array where the  
    - Button Panel Outside
-     - calls the elevator to it's location and adds to the queue.
+    - calls the elevator to it's location and adds to the queue.
    - Button
-     - on press it sends it's floor number to the 
+    - on press it sends it's floor number to the 
 
 3. Door
    - opens when arrived on a floor that had a button press on the outside or inside
-     - Also closes when a button has been pressed on the inside unless open door button is being pressed
+    - Also closes when a button has been pressed on the inside unless open door button is being pressed
 ### Functions
 
 1. callElevator()
