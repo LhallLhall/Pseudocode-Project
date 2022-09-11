@@ -1,65 +1,51 @@
 # Pseudocode Project
 ## Describing how an elevator works.
-### Objects
+### Objects/INIT
 1. Elevator
-    * when it's recieved an number form the array it dettects what floor it needs to go too then it determines whether or not to go up or down. When it has completed all of items in the array it stops.
-2. Door
-    * opens when arrived on a floor that had a button press on the outside and inside
-    * Also closes when a button has been pressed on the inside unless open door button is being pressed
-3. Button Panels
-  * Button Panel Inside
-    * Has (open door) and (close door) buttons. Also has an array of buttons that tell the elevator where to go/what function to call.
-  * Button Panel Outside
-    * calls the elevator to it's location and adds to the queue.
-### procedure for picking up a person
-~~~
-START
-INIT = power on
+   - Goes up and down while listening for updates in an array
+     - When it's recieved a number from the array it detects what floor it needs to go too then it determines whether or not to go up or down. When it has completed all of items in the array it stops.
 
-WHILE power on 
-    check queue for items
-    check current floor of the elevator
----
-WHEN outside input button is pressed
-    create input
-    add input to the queue
----
+2. Button Panels
+   - Button Panel Inside
+     - Has (open door) and (close door) buttons. On press the buttons push a number to an array where the  
+   - Button Panel Outside
+     - calls the elevator to it's location and adds to the queue.
+   - Button
+     - on press it sends it's floor number to the 
 
----
-IF the queue has more than 0 in the array
-    check what floor number it is
-ELSE IF inputs floor > elevator's current floor
-    go up
-ELSE
-    go down
-ELSE
-    stay still
----    
-IF inputs floor location is a number higher than the position of the elevator
-    go "up"
-ELSE
-    go "down
----   
-IF going "up"
-    check closest input between current floor and max floor
----    
-IF going "down"
-    check closest input between current floor and minimum floor
----   
-WHEN reached the queues current item 
-    open doors
-    reset input button
-    check inside input
-    delete floors input
---- 
-// When the elevator has someone on it.
+3. Door
+   - opens when arrived on a floor that had a button press on the outside and inside
+     - Also closes when a button has been pressed on the inside unless open door button is being pressed
+### Variables
+- button
+- 
+### Functions
 
-WHEN the inside button input is pressed
-    add input to the queue
-    If button input floor > elevator floor
-        go up
-    ELSE 
-        go down
----
+1. callElevator()
+   * Outside Panel only
+   * Tells the elevator to go to the floor of the button press //this explanation may need work
+2. checkCurrentFloor()
+   * chekcs what current floor the elevator is on // THIS IS A MAYBE (and see whether or not it needs to go up or down) //dont know if this will corectly work 
+3. holdDoorOpen()
+   * Stops all current processes/changing floors and holds the door open.
+4. findRidersFloor()
+   * tells the elevator what floor the rider called the elevator from and adds it to an array with .push
+5. stopAtFloor()
+   * once the elevator reached the item in the queue or goes to a floor with a called elevator input.
+6. buttonPress
+   * when the button us pressed it tells the elevator what floor the press was executed on
 
 ~~~
+let riderQueue []
+let riderPickupQueueUp []
+let riderPickupQueueDown []
+
+Function callElevator
+  
+Function buttonPress
+      IF button > elevatorFloor
+         ADD the buttons floor value to the riderPickupQueue
+      ELSE IF button != elevatorFloor 
+         
+~~~
+
