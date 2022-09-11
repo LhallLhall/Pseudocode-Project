@@ -51,6 +51,3 @@ Function buttonPress
          ADD the buttons floor value to the riderPickupQueueUp
       ELSE do nothing
 ~~~
-~~~
-
-~~~
